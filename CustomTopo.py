@@ -10,16 +10,6 @@ from mininet.log import setLogLevel
 
 
 class CustomTopo(Topo):
-    """
-    linkopts1 : параметр производительности для линков между коммутаторами
-    core и aggregation
-    linkopts2 : параметр производительности для линков между коммутаторами
-    aggregation и edge
-    linkopts3 : параметр производительности для линков между коммутаторами
-    edge и хостом
-    fanout : параметр fanout означающий число childs per node
-    """
-
     def __init__(self, linkopts1, linkopts2, linkopts3, fanout=2, **opts):
         Topo.__init__(self, **opts)
 
@@ -61,3 +51,4 @@ def simple_test():
 
 if __name__ == '__main__':
     setLogLevel('info')
+    simple_test()
